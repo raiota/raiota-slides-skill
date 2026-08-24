@@ -1,0 +1,11 @@
+{
+  "name": "raiota-slides",
+  "description": "HTML でスライドを組むための個人用テンプレート。Catppuccin Latte 配色・M PLUS Rounded 1c・22 レイアウト。",
+  "version": "0.1.0",
+  "author": {
+    "name": "raiota",
+    "url": "https://github.com/raiota"
+  },
+  "repository": "https://github.com/raiota/raiota-slides-skill",
+  "keywords": ["slides", "presentation", "html", "template"]
+}

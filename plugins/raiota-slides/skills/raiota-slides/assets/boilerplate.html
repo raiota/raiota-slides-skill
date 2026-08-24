@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>タイトル</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- 数式を使うスライドがあるときだけ残す -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<style>
+  html, body { margin:0; padding:0; background:#acb0be; }
+  a { color:#e64553; text-decoration:none; border-bottom:1px solid rgba(230,69,83,0.4); }
+  a:hover { color:#c93a48; border-bottom-color:#c93a48; }
+</style>
+<script src="./deck-stage.js"></script>
+<script>
+  // data-tex 属性の式を KaTeX で描画する（data-tex-display を付けると独立式）
+  (function typeset() {
+    if (!window.katex) return setTimeout(typeset, 150);
+    document.querySelectorAll('[data-tex]:not([data-tex-done])').forEach(function (el) {
+      try {
+        katex.render(el.getAttribute('data-tex'), el, {
+          displayMode: el.hasAttribute('data-tex-display'),
+          throwOnError: false
+        });
+        el.setAttribute('data-tex-done', '1');
+      } catch (e) { /* 読み込み失敗時は素のテキストを残す */ }
+    });
+  })();
+</script>
+</head>
+<body>
+<deck-stage width="1920" height="1080">
+
+  <!-- layouts.html から必要なレイアウトを貼り、中身だけ書き換える -->
+
+</deck-stage>
+</body>
+</html>
