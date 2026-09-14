@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>レイアウト見本</title>
+<title>スライド・テンプレート</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -15,6 +15,7 @@
   a:hover { color:#c93a48; border-bottom-color:#c93a48; }
 </style>
 <script src="./deck-stage.js"></script>
+<script src="./image-slot.js"></script>
 <script>
   // data-tex 属性の式を KaTeX で描画する（data-tex-display を付けると独立式）
   (function typeset() {
@@ -37,480 +38,93 @@
 <section data-label="表紙" data-speaker-notes="表紙。タイトルは明朝、装飾は朱の短い罫線ひとつだけ。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:120px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;">
   <div style="width:88px;height:3px;background:#e64553;margin-bottom:56px;"></div>
   <h1 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:112px;font-weight:700;line-height:1.18;letter-spacing:0.01em;margin:0 0 44px 0;color:#4c4f69;">スライド・テンプレート</h1>
-  <p style="font-size:40px;line-height:1.6;font-weight:400;color:#4c4f69;margin:0 0 92px 0;max-width:1180px;">HTML で組む、個人用のプレゼンテーション基盤</p>
+  <p style="font-size:40px;line-height:1.6;font-weight:400;color:#4c4f69;margin:0 0 92px 0;max-width:1180px;">ピッチ・LT・報告のための、HTML スライドの基本形</p>
   <div style="display:flex;gap:56px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:26px;letter-spacing:0.1em;color:#6c6f85;">
     <span>2026.08</span>
     <span>1920 × 1080</span>
-    <span>22 LAYOUTS</span>
+    <span>16 LAYOUTS</span>
   </div>
 </section>
 
-<section data-label="収録レイアウト" data-speaker-notes="テンプレートに入っているレイアウトの一覧。目次スライドとしても使う。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">収録レイアウト</h2>
+<section data-label="自己紹介" data-speaker-notes="自己紹介。名前と肩書きを大きく、下に職務経歴を年次で3行、最後に興味/趣味を一行。画像は正方形の枠に落とす。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
+  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">自己紹介</h2>
   <div style="height:1px;background:#8c8fa1;margin-bottom:56px;"></div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);column-gap:72px;row-gap:0;">
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">01</span><span style="font-size:29px;">表紙</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">09</span><span style="font-size:29px;">表組み</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">17</span><span style="font-size:29px;">リストと番号</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">02</span><span style="font-size:29px;">目次・一覧</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">10</span><span style="font-size:29px;">図解・プロセス</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">18</span><span style="font-size:29px;">インデント</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">03</span><span style="font-size:29px;">章扉</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">11</span><span style="font-size:29px;">Git flow</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">19</span><span style="font-size:29px;">数値の表</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">04</span><span style="font-size:29px;">標準（見出し＋本文）</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">12</span><span style="font-size:29px;">強調と異常系</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">20</span><span style="font-size:29px;">数式</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">05</span><span style="font-size:29px;">2カラム比較</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">13</span><span style="font-size:29px;">コード</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">21</span><span style="font-size:29px;">カード</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">06</span><span style="font-size:29px;">数値の強調</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">14</span><span style="font-size:29px;">引用</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">22</span><span style="font-size:29px;">まとめ</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">07</span><span style="font-size:29px;">色の役割</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">15</span><span style="font-size:29px;">画像</span></div>
-    <div></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">08</span><span style="font-size:29px;">図表のパレット</span></div>
-    <div style="display:flex;align-items:baseline;gap:28px;padding:14px 0;border-bottom:1px solid #bcc0cc;"><span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;">16</span><span style="font-size:29px;">見出しの階層</span></div>
-    <div></div>
+  <div style="display:grid;grid-template-columns:420px 1fr;column-gap:96px;align-items:start;">
+    <div style="position:relative;width:420px;height:420px;border:1px solid #4c4f69;">
+      <image-slot id="tpl-portrait-02" shape="rect" fit="cover" placeholder="顔写真をここにドロップ"></image-slot>
+    </div>
+    <div>
+      <div style="font-size:68px;font-weight:700;line-height:1.2;margin-bottom:16px;">山田 太郎</div>
+      <div style="font-size:34px;line-height:1.6;color:#5c5f77;margin-bottom:40px;">株式会社◯◯ / プロダクトエンジニア</div>
+      <div style="font-size:26px;letter-spacing:0.14em;color:#10797a;margin-bottom:16px;">CAREER</div>
+      <div style="display:grid;grid-template-columns:160px 1fr;column-gap:40px;">
+        <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:28px;line-height:1.6;color:#5c5f77;font-variant-numeric:tabular-nums;padding:16px 0;border-top:1px solid #8c8fa1;">2018—</div>
+        <div style="font-size:30px;line-height:1.6;padding:16px 0;border-top:1px solid #8c8fa1;">受託開発会社でフロントエンド実装を担当</div>
+        <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:28px;line-height:1.6;color:#5c5f77;font-variant-numeric:tabular-nums;padding:16px 0;border-top:1px solid #bcc0cc;">2021—</div>
+        <div style="font-size:30px;line-height:1.6;padding:16px 0;border-top:1px solid #bcc0cc;">現職。社内プラットフォームの設計と運用</div>
+        <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:28px;line-height:1.6;color:#5c5f77;font-variant-numeric:tabular-nums;padding:16px 0;border-top:1px solid #bcc0cc;border-bottom:1px solid #8c8fa1;">2023—</div>
+        <div style="font-size:30px;line-height:1.6;padding:16px 0;border-top:1px solid #bcc0cc;border-bottom:1px solid #8c8fa1;">開発者体験チームの立ち上げ、3 名を統括</div>
+      </div>
+      <div style="font-size:26px;letter-spacing:0.14em;color:#10797a;margin:36px 0 14px;">興味 / 趣味</div>
+      <div style="font-size:30px;line-height:1.6;">組み版、設計ドキュメント、山歩き、レコード蒐集</div>
+    </div>
   </div>
   <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>02</span>
+    <span>PRESENTATION TEMPLATE</span><span>02</span>
+  </div>
+</section>
+
+<section data-label="目次" data-speaker-notes="目次。項目は五つまで。番号は二桁ぞろえ、行間は内部罫のみ。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
+  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">目次</h2>
+  <div style="height:1px;background:#8c8fa1;margin-bottom:64px;"></div>
+  <div style="display:flex;flex-direction:column;">
+    <div style="display:grid;grid-template-columns:78px 1fr;column-gap:44px;align-items:baseline;padding:28px 0;border-top:1px solid #8c8fa1;">
+      <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:34px;color:#10797a;font-variant-numeric:tabular-nums;">01</span>
+      <span style="font-size:38px;line-height:1.5;">自己紹介と背景</span>
+    </div>
+    <div style="display:grid;grid-template-columns:78px 1fr;column-gap:44px;align-items:baseline;padding:28px 0;border-top:1px solid #bcc0cc;">
+      <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:34px;color:#10797a;font-variant-numeric:tabular-nums;">02</span>
+      <span style="font-size:38px;line-height:1.5;">課題の整理</span>
+    </div>
+    <div style="display:grid;grid-template-columns:78px 1fr;column-gap:44px;align-items:baseline;padding:28px 0;border-top:1px solid #bcc0cc;">
+      <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:34px;color:#10797a;font-variant-numeric:tabular-nums;">03</span>
+      <span style="font-size:38px;line-height:1.5;">提案するしくみ</span>
+    </div>
+    <div style="display:grid;grid-template-columns:78px 1fr;column-gap:44px;align-items:baseline;padding:28px 0;border-top:1px solid #bcc0cc;">
+      <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:34px;color:#10797a;font-variant-numeric:tabular-nums;">04</span>
+      <span style="font-size:38px;line-height:1.5;">検証の結果</span>
+    </div>
+    <div style="display:grid;grid-template-columns:78px 1fr;column-gap:44px;align-items:baseline;padding:28px 0;border-top:1px solid #bcc0cc;border-bottom:1px solid #8c8fa1;">
+      <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:34px;color:#10797a;font-variant-numeric:tabular-nums;">05</span>
+      <span style="font-size:38px;line-height:1.5;">次の一手</span>
+    </div>
+  </div>
+  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
+    <span>PRESENTATION TEMPLATE</span><span>03</span>
   </div>
 </section>
 
 <section data-label="章扉 01" data-speaker-notes="章扉。番号を大きく、章題は明朝。すべての章扉はこの形で統一する。" style="background:#4c4f69;color:#eff1f5;font-family:'M PLUS Rounded 1c',sans-serif;padding:120px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;">
   <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:200px;font-weight:400;line-height:1;letter-spacing:-0.02em;color:#94e2d5;margin-bottom:48px;">01</div>
   <div style="height:1px;background:rgba(239,241,245,0.4);margin-bottom:48px;max-width:900px;"></div>
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:76px;font-weight:700;line-height:1.25;margin:0 0 28px 0;color:#eff1f5;">基本レイアウト</h2>
-  <p style="font-size:34px;line-height:1.6;color:#ccd0da;margin:0;max-width:1000px;">本文・一覧・比較。全体の八割はこの三つで足りる。</p>
+  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:76px;font-weight:700;line-height:1.25;margin:0 0 28px 0;color:#eff1f5;">課題の整理</h2>
+  <p style="font-size:34px;line-height:1.6;color:#ccd0da;margin:0;max-width:1000px;">いま何が起きているか。数字と事実だけを置く。</p>
 </section>
 
-<section data-label="標準レイアウト" data-speaker-notes="標準スライド。見出し、リード文、三項目の並び。項目は罫線だけで区切る。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">見出しと本文の基本形</h2>
+<section data-label="見出しと本文" data-speaker-notes="標準スライド。h2 の下だけに罫線を引き、h3 には引かない。本文は 34px、全角30字で折り返す。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
+  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">見出しと本文</h2>
   <div style="height:1px;background:#8c8fa1;margin-bottom:48px;"></div>
-  <p style="font-size:38px;line-height:1.6;color:#4c4f69;margin:0 0 56px 0;max-width:1400px;">情報の階層は、書体の大きさと余白だけで示す。囲み枠や色地は使わない。</p>
-  <div style="display:flex;flex-direction:column;">
-    <div style="display:grid;grid-template-columns:96px 1fr;column-gap:40px;align-items:baseline;padding:28px 0;border-top:1px solid #8c8fa1;">
-      <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:26px;color:#10797a;">A</span>
-      <div>
-        <div style="font-size:36px;font-weight:500;margin-bottom:10px;">一枚に主張はひとつ</div>
-        <div style="font-size:28px;line-height:1.65;color:#5c5f77;">補足は話し手が言う。スライドは論点の見出しに徹する。</div>
-      </div>
-    </div>
-    <div style="display:grid;grid-template-columns:96px 1fr;column-gap:40px;align-items:baseline;padding:28px 0;border-top:1px solid #8c8fa1;">
-      <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:26px;color:#10797a;">B</span>
-      <div>
-        <div style="font-size:36px;font-weight:500;margin-bottom:10px;">強調は書体の太さで足りる</div>
-        <div style="font-size:28px;line-height:1.65;color:#5c5f77;">下線・蛍光マーカー・色替えを重ねない。効かせる箇所は一枚に一つ。</div>
-      </div>
-    </div>
-    <div style="display:grid;grid-template-columns:96px 1fr;column-gap:40px;align-items:baseline;padding:28px 0;border-top:1px solid #8c8fa1;border-bottom:1px solid #8c8fa1;">
-      <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:26px;color:#10797a;">C</span>
-      <div>
-        <div style="font-size:36px;font-weight:500;margin-bottom:10px;">下端の余白は詰めない</div>
-        <div style="font-size:28px;line-height:1.65;color:#5c5f77;">空きは余りではなく、視線の落ち着き先として確保しておく。</div>
-      </div>
-    </div>
-  </div>
+  <p style="font-size:38px;line-height:1.6;margin:0 0 56px 0;max-width:1400px;">情報の階層は、書体の大きさと余白だけで示す。囲み枠や色地は使わない。</p>
+  <h3 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:42px;font-weight:500;line-height:1.35;margin:0 0 20px 0;color:#4c4f69;">小見出しは h3 まで</h3>
+  <p style="font-size:34px;line-height:1.7;margin:0 0 52px 0;max-width:1400px;">h3 に罫線は付けない。四段目が必要になったら、スライドを二枚に割るか <strong style="font-weight:500;color:#10797a;">ラベル</strong>で代用する。</p>
+  <h3 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:42px;font-weight:500;line-height:1.35;margin:0 0 20px 0;color:#4c4f69;">強調は一枚に一箇所</h3>
+  <p style="font-size:34px;line-height:1.7;margin:0;max-width:1400px;word-break:keep-all;">一番言いたい語句だけを <strong style="font-weight:700;color:#e64553;">maroon の太字</strong>にする。下線や色替えを重ねない。</p>
   <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>04</span>
+    <span>PRESENTATION TEMPLATE</span><span>05</span>
   </div>
 </section>
 
-<section data-label="2カラム比較" data-speaker-notes="2カラム。中央の縦罫線一本で分ける。左右の行数を揃えると安定する。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">Markdown と HTML の役割分担</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:56px;"></div>
-  <div style="display:grid;grid-template-columns:1fr 1px 1fr;column-gap:80px;flex:1;">
-    <div style="display:flex;flex-direction:column;">
-      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:26px;letter-spacing:0.14em;color:#10797a;margin-bottom:32px;">MARKDOWN</div>
-      <div style="font-size:34px;line-height:1.7;color:#4c4f69;">
-        <div style="margin-bottom:26px;">書くのが速い。差分が読める。</div>
-        <div style="margin-bottom:26px;">構成を考える段階では、これ以上の道具がない。</div>
-        <div>ただし表現力は記法の範囲で止まる。</div>
-      </div>
-    </div>
-    <div style="background:#8c8fa1;"></div>
-    <div style="display:flex;flex-direction:column;">
-      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:26px;letter-spacing:0.14em;color:#10797a;margin-bottom:32px;">HTML</div>
-      <div style="font-size:34px;line-height:1.7;color:#4c4f69;">
-        <div style="margin-bottom:26px;">一枚ごとに寸法を決められる。</div>
-        <div style="margin-bottom:26px;">図・表・グラフに抽象の壁がない。</div>
-        <div>手で書くと重いが、そこは生成に任せる。</div>
-      </div>
-    </div>
-  </div>
-  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>05</span>
-  </div>
-</section>
-
-<section data-label="数値の強調" data-speaker-notes="数値スライド。桁は明朝の大きな字で、単位と説明は小さく添える。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">組み版の基準値</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:72px;"></div>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;column-gap:80px;">
-    <div>
-      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:128px;font-weight:700;line-height:1;letter-spacing:-0.01em;margin-bottom:28px;">120<span style="font-size:48px;color:#6c6f85;">px</span></div>
-      <div style="height:1px;background:#8c8fa1;margin-bottom:24px;"></div>
-      <div style="font-size:28px;line-height:1.6;color:#5c5f77;">左右の余白。ここを削ると一気に窮屈になる。</div>
-    </div>
-    <div>
-      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:128px;font-weight:700;line-height:1;letter-spacing:-0.01em;margin-bottom:28px;">34<span style="font-size:48px;color:#6c6f85;">px</span></div>
-      <div style="height:1px;background:#8c8fa1;margin-bottom:24px;"></div>
-      <div style="font-size:28px;line-height:1.6;color:#5c5f77;">本文の下限。会場の後方から読める最小値。</div>
-    </div>
-    <div>
-      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:128px;font-weight:700;line-height:1;letter-spacing:-0.01em;margin-bottom:28px;">2<span style="font-size:48px;color:#6c6f85;">色</span></div>
-      <div style="height:1px;background:#8c8fa1;margin-bottom:24px;"></div>
-      <div style="font-size:28px;line-height:1.6;color:#5c5f77;">差し色は主張の maroon と構造の teal。役割を分ける。</div>
-    </div>
-  </div>
-  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>06</span>
-  </div>
-</section>
-
-<section data-label="章扉 02" data-speaker-notes="章扉、二枚目。01 と完全に同じ骨格。" style="background:#4c4f69;color:#eff1f5;font-family:'M PLUS Rounded 1c',sans-serif;padding:120px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;">
-  <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:200px;font-weight:400;line-height:1;letter-spacing:-0.02em;color:#94e2d5;margin-bottom:48px;">02</div>
-  <div style="height:1px;background:rgba(239,241,245,0.4);margin-bottom:48px;max-width:900px;"></div>
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:76px;font-weight:700;line-height:1.25;margin:0 0 28px 0;color:#eff1f5;">色と図表</h2>
-  <p style="font-size:34px;line-height:1.6;color:#ccd0da;margin:0;max-width:1000px;">Marp で一番苦しかった領域を、素の HTML で組み直す。</p>
-</section>
-
-<section data-label="色の役割" data-speaker-notes="配色の指針。色ごとに役割を一つだけ決め、それ以外の使い方をしない。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">色の役割</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:44px;"></div>
-  <p style="font-size:34px;line-height:1.6;color:#5c5f77;margin:0 0 36px 0;max-width:1500px;">色ごとに役割をひとつだけ決める。迷ったら使わない、が既定。</p>
-  <div style="display:flex;flex-direction:column;">
-    <div style="display:grid;grid-template-columns:180px 300px 1fr;column-gap:48px;align-items:center;padding:11px 0;border-top:1px solid #8c8fa1;">
-      <div style="display:flex;height:44px;"><div style="flex:1;background:#eff1f5;border:1px solid #8c8fa1;"></div><div style="flex:1;background:#4c4f69;"></div></div>
-      <div><div style="font-size:34px;font-weight:500;">地と文字</div><div style="font-size:24px;color:#6c6f85;margin-top:6px;">base / text</div></div>
-      <div style="font-size:28px;line-height:1.6;color:#5c5f77;">この二値が全体の基調。反転面は <strong style="font-weight:700;">#4c4f69</strong> のみで、他の暗色は作らない。</div>
-    </div>
-    <div style="display:grid;grid-template-columns:180px 300px 1fr;column-gap:48px;align-items:center;padding:11px 0;border-top:1px solid #8c8fa1;">
-      <div style="display:flex;height:44px;"><div style="flex:1;background:#8c8fa1;"></div><div style="flex:1;background:#bcc0cc;"></div></div>
-      <div><div style="font-size:34px;font-weight:500;">罫線</div><div style="font-size:24px;color:#6c6f85;margin-top:6px;">#8c8fa1 / #bcc0cc</div></div>
-      <div style="font-size:28px;line-height:1.6;color:#5c5f77;">枠罫（見出し下・フッター上・表の外側）に #8c8fa1、内部の行間に #bcc0cc。この二段だけ。</div>
-    </div>
-    <div style="display:grid;grid-template-columns:180px 300px 1fr;column-gap:48px;align-items:center;padding:11px 0;border-top:1px solid #8c8fa1;">
-      <div style="height:44px;background:#e64553;"></div>
-      <div><div style="font-size:34px;font-weight:500;">主張</div><div style="font-size:24px;color:#6c6f85;margin-top:6px;">maroon #e64553</div></div>
-      <div style="font-size:28px;line-height:1.6;color:#5c5f77;">一枚に一箇所まで。ここを見せたいという合図。増やすと効かなくなる。</div>
-    </div>
-    <div style="display:grid;grid-template-columns:180px 300px 1fr;column-gap:48px;align-items:center;padding:11px 0;border-top:1px solid #8c8fa1;">
-      <div style="height:44px;background:#10797a;"></div>
-      <div><div style="font-size:34px;font-weight:500;">構造</div><div style="font-size:24px;color:#6c6f85;margin-top:6px;">teal #10797a</div></div>
-      <div style="font-size:28px;line-height:1.6;color:#5c5f77;">番号・記号・ラベル（カラム名や分類名）。見出しの階層とは別系統で、同じ役割の要素すべてに等しく載せる。</div>
-    </div>
-    <div style="display:grid;grid-template-columns:180px 300px 1fr;column-gap:48px;align-items:center;padding:11px 0;border-top:1px solid #8c8fa1;border-bottom:1px solid #8c8fa1;">
-      <div style="display:flex;height:44px;"><div style="flex:1;background:#1e66f5;"></div><div style="flex:1;background:#10797a;"></div><div style="flex:1;background:#8839ef;"></div><div style="flex:1;background:#40a02b;"></div><div style="flex:1;background:#df8e1d;"></div><div style="flex:1;background:#ea76cb;"></div></div>
-      <div><div style="font-size:34px;font-weight:500;">図表</div><div style="font-size:24px;color:#6c6f85;margin-top:6px;">series 1&ndash;6</div></div>
-      <div style="font-size:28px;line-height:1.6;color:#5c5f77;">系列を区別するためだけの色。本文や装飾には持ち出さない。</div>
-    </div>
-  </div>
-  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>08</span>
-  </div>
-</section>
-
-<section data-label="図表のパレット" data-speaker-notes="図表用の6色。左から順に使い、飛ばさない。赤は系列に入れず異常系に取っておく。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">図表のパレット</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:44px;"></div>
-  <p style="font-size:34px;line-height:1.6;color:#5c5f77;margin:0 0 52px 0;max-width:1500px;">系列は左から順に使う。飛ばさない、並べ替えない。</p>
-  <div style="display:grid;grid-template-columns:repeat(6,1fr);column-gap:28px;">
-    <div><div style="height:132px;background:#1e66f5;margin-bottom:22px;"></div><div style="font-size:30px;font-weight:500;margin-bottom:8px;">系列 1</div><div style="font-size:24px;color:#6c6f85;margin-bottom:14px;">blue #1e66f5</div><div style="font-size:26px;line-height:1.55;color:#5c5f77;">基準・幹となる系列</div></div>
-    <div><div style="height:132px;background:#10797a;margin-bottom:22px;"></div><div style="font-size:30px;font-weight:500;margin-bottom:8px;">系列 2</div><div style="font-size:24px;color:#6c6f85;margin-bottom:14px;">teal #10797a</div><div style="font-size:26px;line-height:1.55;color:#5c5f77;">対になるもう一方</div></div>
-    <div><div style="height:132px;background:#8839ef;margin-bottom:22px;"></div><div style="font-size:30px;font-weight:500;margin-bottom:8px;">系列 3</div><div style="font-size:24px;color:#6c6f85;margin-bottom:14px;">mauve #8839ef</div><div style="font-size:26px;line-height:1.55;color:#5c5f77;">枝分かれ・派生</div></div>
-    <div><div style="height:132px;background:#40a02b;margin-bottom:22px;"></div><div style="font-size:30px;font-weight:500;margin-bottom:8px;">系列 4</div><div style="font-size:24px;color:#6c6f85;margin-bottom:14px;">green #40a02b</div><div style="font-size:26px;line-height:1.55;color:#5c5f77;">完了・正常</div></div>
-    <div><div style="height:132px;background:#df8e1d;margin-bottom:22px;"></div><div style="font-size:30px;font-weight:500;margin-bottom:8px;">系列 5</div><div style="font-size:24px;color:#6c6f85;margin-bottom:14px;">yellow #df8e1d</div><div style="font-size:26px;line-height:1.55;color:#5c5f77;">保留・待機</div></div>
-    <div><div style="height:132px;background:#ea76cb;margin-bottom:22px;"></div><div style="font-size:30px;font-weight:500;margin-bottom:8px;">系列 6</div><div style="font-size:24px;color:#6c6f85;margin-bottom:14px;">pink #ea76cb</div><div style="font-size:26px;line-height:1.55;color:#5c5f77;">例外・特殊</div></div>
-  </div>
-  <div style="margin-top:52px;display:grid;grid-template-columns:180px 1fr;column-gap:48px;align-items:center;border-top:1px solid #8c8fa1;border-bottom:1px solid #8c8fa1;padding:26px 0;">
-    <div style="height:44px;background:#e64553;"></div>
-    <div style="font-size:30px;line-height:1.6;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">maroon は系列に入れない。</strong>　異常系・障害・注意にだけ残しておく。使える色が七色あると思って埋めた図は、まず読めない。</div>
-  </div>
-  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>09</span>
-  </div>
-</section>
-
-<section data-label="表組み" data-speaker-notes="表。罫線は横のみ、影と色地なし。ヘッダは細字＋字間で区別する。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">レイアウトの使いどころ</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:56px;"></div>
-  <table style="width:100%;border-collapse:collapse;font-size:30px;">
-    <thead>
-      <tr>
-        <th style="text-align:left;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;font-weight:400;letter-spacing:0.16em;color:#6c6f85;padding:0 0 20px 0;border-bottom:1px solid #8c8fa1;">LAYOUT</th>
-        <th style="text-align:left;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;font-weight:400;letter-spacing:0.16em;color:#6c6f85;padding:0 0 20px 32px;border-bottom:1px solid #8c8fa1;">USE</th>
-        <th style="text-align:left;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;font-weight:400;letter-spacing:0.16em;color:#6c6f85;padding:0 0 20px 32px;border-bottom:1px solid #8c8fa1;">NOTE</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding:26px 0;border-bottom:1px solid #bcc0cc;font-weight:500;">章扉</td>
-        <td style="padding:26px 0 26px 32px;border-bottom:1px solid #bcc0cc;color:#4c4f69;">話題の切り替え</td>
-        <td style="padding:26px 0 26px 32px;border-bottom:1px solid #bcc0cc;color:#5c5f77;font-size:28px;">墨地。番号を必ず入れる</td>
-      </tr>
-      <tr>
-        <td style="padding:26px 0;border-bottom:1px solid #bcc0cc;font-weight:500;">2カラム</td>
-        <td style="padding:26px 0 26px 32px;border-bottom:1px solid #bcc0cc;color:#4c4f69;">対比・前後比較</td>
-        <td style="padding:26px 0 26px 32px;border-bottom:1px solid #bcc0cc;color:#5c5f77;font-size:28px;">左右の行数を揃える</td>
-      </tr>
-      <tr>
-        <td style="padding:26px 0;border-bottom:1px solid #bcc0cc;font-weight:500;">数値</td>
-        <td style="padding:26px 0 26px 32px;border-bottom:1px solid #bcc0cc;color:#4c4f69;">結論を一目で渡す</td>
-        <td style="padding:26px 0 26px 32px;border-bottom:1px solid #bcc0cc;color:#5c5f77;font-size:28px;">三つまで。四つ目は表に</td>
-      </tr>
-      <tr>
-        <td style="padding:26px 0;border-bottom:1px solid #bcc0cc;font-weight:500;">図解</td>
-        <td style="padding:26px 0 26px 32px;border-bottom:1px solid #bcc0cc;color:#4c4f69;">手順・構造の説明</td>
-        <td style="padding:26px 0 26px 32px;border-bottom:1px solid #bcc0cc;color:#5c5f77;font-size:28px;">箱は四つまでに収める</td>
-      </tr>
-      <tr>
-        <td style="padding:26px 0;border-bottom:1px solid #8c8fa1;font-weight:500;">引用</td>
-        <td style="padding:26px 0 26px 32px;border-bottom:1px solid #8c8fa1;color:#4c4f69;">論拠・締めの一言</td>
-        <td style="padding:26px 0 26px 32px;border-bottom:1px solid #8c8fa1;color:#5c5f77;font-size:28px;">一枚に一つだけ置く</td>
-      </tr>
-    </tbody>
-  </table>
-  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>10</span>
-  </div>
-</section>
-
-<section data-label="図解" data-speaker-notes="図解。箱は罫線のみ、接続は細い横線と朱の小さな印。Mermaid を使わずに手で組む前提。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">制作の流れ</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:64px;"></div>
-  <div style="display:grid;grid-template-columns:1fr 56px 1fr 56px 1fr 56px 1fr;align-items:stretch;">
-    <div style="border:1px solid #4c4f69;padding:36px 32px;display:flex;flex-direction:column;justify-content:space-between;min-height:260px;">
-      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;margin-bottom:20px;">01</div>
-      <div>
-        <div style="font-size:36px;font-weight:500;margin-bottom:12px;">構成</div>
-        <div style="font-size:26px;line-height:1.6;color:#5c5f77;">見出しだけを並べ、筋を確認する</div>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:center;"><div style="width:100%;height:1px;background:#8c8fa1;"></div><div style="width:8px;height:8px;background:#10797a;flex:none;margin-left:-4px;"></div></div>
-    <div style="border:1px solid #4c4f69;padding:36px 32px;display:flex;flex-direction:column;justify-content:space-between;min-height:260px;">
-      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;margin-bottom:20px;">02</div>
-      <div>
-        <div style="font-size:36px;font-weight:500;margin-bottom:12px;">原稿</div>
-        <div style="font-size:26px;line-height:1.6;color:#5c5f77;">一枚あたりの文字数を決めて書く</div>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:center;"><div style="width:100%;height:1px;background:#8c8fa1;"></div><div style="width:8px;height:8px;background:#10797a;flex:none;margin-left:-4px;"></div></div>
-    <div style="border:1px solid #4c4f69;padding:36px 32px;display:flex;flex-direction:column;justify-content:space-between;min-height:260px;">
-      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#10797a;margin-bottom:20px;">03</div>
-      <div>
-        <div style="font-size:36px;font-weight:500;margin-bottom:12px;">実装</div>
-        <div style="font-size:26px;line-height:1.6;color:#5c5f77;">レイアウトを選び、寸法を詰める</div>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;justify-content:center;"><div style="width:100%;height:1px;background:#8c8fa1;"></div><div style="width:8px;height:8px;background:#10797a;flex:none;margin-left:-4px;"></div></div>
-    <div style="border:1px solid #4c4f69;padding:36px 32px;display:flex;flex-direction:column;justify-content:space-between;min-height:260px;background:#4c4f69;color:#eff1f5;">
-      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;color:#94e2d5;margin-bottom:20px;">04</div>
-      <div>
-        <div style="font-size:36px;font-weight:500;margin-bottom:12px;">出力</div>
-        <div style="font-size:26px;line-height:1.6;color:#ccd0da;">画面・PDF・PPTX を同じ原稿から</div>
-      </div>
-    </div>
-  </div>
-  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>11</span>
-  </div>
-</section>
-
-<section data-label="Git flow" data-speaker-notes="図表パレットの実例。ブランチ図は SVG で組む。線と丸だけで、影も矢印の飾りも付けない。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">ブランチ戦略</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:40px;"></div>
-  <svg viewBox="0 0 1680 470" style="width:100%;height:auto;font-family:'M PLUS Rounded 1c',sans-serif;">
-    <g stroke-linecap="round" fill="none" stroke-width="4">
-      <path d="M260 60 H1560" stroke="#1e66f5"/>
-      <path d="M260 60 C310 60 310 290 360 290" stroke="#10797a"/>
-      <path d="M360 290 H1560" stroke="#10797a"/>
-      <path d="M420 290 C470 290 470 405 520 405" stroke="#8839ef"/>
-      <path d="M520 405 H740" stroke="#8839ef"/>
-      <path d="M740 405 C830 405 830 290 920 290" stroke="#8839ef"/>
-      <path d="M920 290 C970 290 970 175 1020 175" stroke="#df8e1d"/>
-      <path d="M1020 175 H1120" stroke="#df8e1d"/>
-      <path d="M1120 175 C1180 175 1180 60 1240 60" stroke="#df8e1d"/>
-      <path d="M1120 175 C1260 175 1280 290 1400 290" stroke="#df8e1d"/>
-    </g>
-    <g fill="#eff1f5" stroke-width="4">
-      <circle cx="260" cy="60" r="13" stroke="#1e66f5"/><circle cx="1240" cy="60" r="13" stroke="#1e66f5"/>
-      <circle cx="360" cy="290" r="13" stroke="#10797a"/><circle cx="420" cy="290" r="13" stroke="#10797a"/><circle cx="920" cy="290" r="13" stroke="#10797a"/><circle cx="1400" cy="290" r="13" stroke="#10797a"/><circle cx="1560" cy="290" r="13" stroke="#10797a"/>
-      <circle cx="520" cy="405" r="13" stroke="#8839ef"/><circle cx="620" cy="405" r="13" stroke="#8839ef"/><circle cx="740" cy="405" r="13" stroke="#8839ef"/>
-      <circle cx="1020" cy="175" r="13" stroke="#df8e1d"/><circle cx="1120" cy="175" r="13" stroke="#df8e1d"/>
-    </g>
-    <g font-size="28" fill="#4c4f69" text-anchor="end">
-      <text x="180" y="70">main</text><text x="180" y="185">release</text><text x="180" y="300">develop</text><text x="180" y="415">feature</text>
-    </g>
-    <g font-size="24" fill="#6c6f85">
-      <text x="260" y="30">v0.1</text><text x="1216" y="30">v1.0</text>
-      <text x="920" y="252">merge</text><text x="1400" y="252">back-merge</text>
-    </g>
-  </svg>
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);column-gap:48px;margin-top:44px;border-top:1px solid #8c8fa1;padding-top:28px;">
-    <div style="display:grid;grid-template-columns:20px 1fr;column-gap:20px;align-items:start;"><div style="width:20px;height:20px;background:#1e66f5;margin-top:8px;"></div><div style="font-size:26px;line-height:1.55;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">main</strong><br>公開済み。タグを打つ</div></div>
-    <div style="display:grid;grid-template-columns:20px 1fr;column-gap:20px;align-items:start;"><div style="width:20px;height:20px;background:#10797a;margin-top:8px;"></div><div style="font-size:26px;line-height:1.55;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">develop</strong><br>常に最新。統合先</div></div>
-    <div style="display:grid;grid-template-columns:20px 1fr;column-gap:20px;align-items:start;"><div style="width:20px;height:20px;background:#df8e1d;margin-top:8px;"></div><div style="font-size:26px;line-height:1.55;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">release</strong><br>短命。凍結して仕上げ</div></div>
-    <div style="display:grid;grid-template-columns:20px 1fr;column-gap:20px;align-items:start;"><div style="width:20px;height:20px;background:#8839ef;margin-top:8px;"></div><div style="font-size:26px;line-height:1.55;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">feature</strong><br>派生。develop へ戻す</div></div>
-  </div>
-  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>12</span>
-  </div>
-</section>
-
-<section data-label="強調と異常系" data-speaker-notes="maroon の使い方の実例。左は本文の主張、右は図の異常系。この二つ以外に maroon は使わない。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">maroon を使う二箇所</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:56px;"></div>
-  <div style="display:grid;grid-template-columns:1fr 1px 1.15fr;column-gap:88px;flex:1;">
-    <div style="display:flex;flex-direction:column;">
-      <div style="font-size:26px;letter-spacing:0.14em;color:#10797a;margin-bottom:36px;">本文の主張</div>
-      <p style="font-size:42px;line-height:1.55;font-weight:500;color:#4c4f69;margin:0 0 40px 0;word-break:keep-all;overflow-wrap:break-word;">レイアウトを増やすほど、<strong style="font-weight:700;color:#e64553;">選ぶ手間</strong>が増える。</p>
-      <div style="height:1px;background:#bcc0cc;margin-bottom:32px;"></div>
-      <p style="font-size:28px;line-height:1.65;color:#5c5f77;margin:0;">一枚に一箇所だけ。二箇所目を足したくなったら、それは本当に主張かを先に疑う。</p>
-    </div>
-    <div style="background:#8c8fa1;"></div>
-    <div style="display:flex;flex-direction:column;">
-      <div style="font-size:26px;letter-spacing:0.14em;color:#10797a;margin-bottom:36px;">図の異常系</div>
-      <svg viewBox="0 0 760 300" style="width:100%;height:auto;font-family:'M PLUS Rounded 1c',sans-serif;">
-        <g fill="none" stroke-width="3">
-          <path d="M150 102 H200" stroke="#1e66f5"/>
-          <path d="M350 102 H400" stroke="#8c8fa1"/>
-          <path d="M550 102 H600" stroke="#8c8fa1"/>
-          <rect x="0" y="60" width="150" height="84" stroke="#1e66f5"/>
-          <rect x="200" y="60" width="150" height="84" stroke="#e64553"/>
-          <rect x="400" y="60" width="150" height="84" stroke="#8c8fa1"/>
-          <rect x="600" y="60" width="150" height="84" stroke="#8c8fa1"/>
-          <path d="M275 144 V234 H75 V144" stroke="#e64553" stroke-width="3"/>
-        </g>
-        <g font-size="28" text-anchor="middle">
-          <text x="75" y="98" fill="#4c4f69">lint</text>
-          <text x="275" y="98" fill="#e64553">test</text>
-          <text x="475" y="98" fill="#8c8fa1">build</text>
-          <text x="675" y="98" fill="#8c8fa1">deploy</text>
-        </g>
-        <g font-size="22" text-anchor="middle">
-          <text x="75" y="130" fill="#6c6f85">通過</text>
-          <text x="275" y="130" fill="#e64553">失敗</text>
-          <text x="475" y="130" fill="#8c8fa1">未実行</text>
-          <text x="675" y="130" fill="#8c8fa1">未実行</text>
-          <text x="175" y="266" fill="#e64553">差し戻し</text>
-        </g>
-      </svg>
-      <p style="font-size:28px;line-height:1.65;color:#5c5f77;margin:40px 0 0 0;">止まった経路にだけ maroon。到達しなかった先は罫線色に落として、視線を失敗点に集める。</p>
-    </div>
-  </div>
-  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>13</span>
-  </div>
-</section>
-
-<section data-label="コード" data-speaker-notes="コードスライド。墨地の中に等幅、枠飾りなし。行数は12行を上限に。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">一枚の書き方</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:44px;"></div>
-  <div style="display:grid;grid-template-columns:1fr 1.35fr;column-gap:72px;flex:1;">
-    <div style="font-size:30px;line-height:1.75;color:#4c4f69;">
-      <p style="margin:0 0 28px 0;">スライドは <code style="font-family:'JetBrains Mono',monospace;font-size:26px;background:rgba(76,79,105,0.10);padding:0.1em 0.35em;">section</code> 一つ。属性で見出しと読み上げ原稿を持たせる。</p>
-      <p style="margin:0;color:#5c5f77;font-size:28px;">記法を覚える代わりに、寸法をそのまま書く。ここが Marp との一番の違い。</p>
-    </div>
-    <div style="align-self:start;background:#4c4f69;color:#eff1f5;padding:40px 44px;font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.8;">
-      <div style="white-space:pre;"><span style="color:#b4befe;">&lt;section</span> <span style="color:#f9e2af;">data-label</span>=<span style="color:#a6e3a1;">"標準"</span></div>
-      <div style="white-space:pre;">         <span style="color:#f9e2af;">data-speaker-notes</span>=<span style="color:#a6e3a1;">"..."</span></div>
-      <div style="white-space:pre;">         <span style="color:#f9e2af;">style</span>=<span style="color:#a6e3a1;">"padding:96px 120px 84px"</span><span style="color:#b4befe;">&gt;</span></div>
-      <div style="white-space:pre;">  <span style="color:#b4befe;">&lt;h2&gt;</span>見出し<span style="color:#b4befe;">&lt;/h2&gt;</span></div>
-      <div style="white-space:pre;">  <span style="color:#b4befe;">&lt;div</span> <span style="color:#f9e2af;">style</span>=<span style="color:#a6e3a1;">"height:1px;background:#8c8fa1"</span><span style="color:#b4befe;">&gt;&lt;/div&gt;</span></div>
-      <div style="white-space:pre;">  <span style="color:#b4befe;">&lt;p&gt;</span>本文<span style="color:#b4befe;">&lt;/p&gt;</span></div>
-      <div style="white-space:pre;"><span style="color:#b4befe;">&lt;/section&gt;</span></div>
-    </div>
-  </div>
-  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>14</span>
-  </div>
-</section>
-
-<section data-label="引用" data-speaker-notes="引用。紙色をわずかに変え、飾りは朱の短い罫線のみ。" style="background:#e6e9ef;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:120px 160px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;">
-  <div style="width:88px;height:3px;background:#e64553;margin-bottom:56px;"></div>
-  <blockquote style="margin:0 0 56px 0;font-family:'M PLUS Rounded 1c',sans-serif;font-size:60px;font-weight:400;line-height:1.6;letter-spacing:0.01em;color:#4c4f69;max-width:1440px;">完璧とは、付け加えるものが何もなくなったときではなく、削るものが何もなくなったときに達成される。</blockquote>
-  <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:26px;letter-spacing:0.12em;color:#6c6f85;">ANTOINE DE SAINT-EXUPÉRY</div>
-</section>
-
-<section data-label="画像" data-speaker-notes="画像レイアウト。写真は右の枠に落とす。文字は写真に重ねない。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">図版を置く枠</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:48px;"></div>
-  <div style="display:grid;grid-template-columns:1fr 1.5fr;column-gap:72px;flex:1;min-height:0;">
-    <div style="display:flex;flex-direction:column;justify-content:flex-start;">
-      <p style="font-size:34px;line-height:1.7;color:#4c4f69;margin:0 0 32px 0;">スクリーンショットや図は、原寸比のまま枠に収める。文字を上に重ねない。</p>
-      <p style="font-size:28px;line-height:1.65;color:#5c5f77;margin:0;">説明は左に置き、視線を左から右へ一方向に流す。</p>
-    </div>
-    <div style="position:relative;min-height:0;">
-      <image-slot id="tpl-image-11" shape="rect" fit="contain" placeholder="図版をここにドロップ"></image-slot>
-    </div>
-  </div>
-  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>16</span>
-  </div>
-</section>
-
-<section data-label="章扉 03" data-speaker-notes="章扉、三枚目。ここから先は文字要素の扱いを決める。" style="background:#4c4f69;color:#eff1f5;font-family:'M PLUS Rounded 1c',sans-serif;padding:120px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;">
-  <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:200px;font-weight:400;line-height:1;letter-spacing:-0.02em;color:#94e2d5;margin-bottom:48px;">03</div>
-  <div style="height:1px;background:rgba(239,241,245,0.4);margin-bottom:48px;max-width:900px;"></div>
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:76px;font-weight:700;line-height:1.25;margin:0 0 28px 0;color:#eff1f5;">文字要素の作法</h2>
-  <p style="font-size:34px;line-height:1.6;color:#ccd0da;margin:0;max-width:1000px;">見出し・リスト・表・数式・カード。毎回迷う五つを先に決めておく。</p>
-</section>
-
-<section data-label="見出しの階層" data-speaker-notes="見出しは三段まで。h2 の下だけに罫線を引き、h3 には引かない。四段目はラベルで代用する。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">見出しの階層</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:48px;"></div>
-  <div style="display:grid;grid-template-columns:1fr 1px 1fr;column-gap:80px;flex:1;min-height:0;">
-    <div style="display:flex;flex-direction:column;">
-      <div style="font-size:26px;letter-spacing:0.14em;color:#10797a;margin-bottom:32px;">定義</div>
-      <div style="display:grid;grid-template-columns:120px 1fr;column-gap:32px;align-items:baseline;padding:14px 0;border-top:1px solid #8c8fa1;">
-        <span style="font-size:30px;font-weight:500;">h1</span>
-        <div><div style="font-size:28px;margin-bottom:6px;">112px / 700</div><div style="font-size:25px;line-height:1.55;color:#5c5f77;">表紙と章題だけ。本文スライドには置かない</div></div>
-      </div>
-      <div style="display:grid;grid-template-columns:120px 1fr;column-gap:32px;align-items:baseline;padding:14px 0;border-top:1px solid #8c8fa1;">
-        <span style="font-size:30px;font-weight:500;">h2</span>
-        <div><div style="font-size:28px;margin-bottom:6px;">68px / 700</div><div style="font-size:25px;line-height:1.55;color:#5c5f77;">一枚の主題。直下に 1px の罫線を必ず引く</div></div>
-      </div>
-      <div style="display:grid;grid-template-columns:120px 1fr;column-gap:32px;align-items:baseline;padding:14px 0;border-top:1px solid #8c8fa1;">
-        <span style="font-size:30px;font-weight:500;">h3</span>
-        <div><div style="font-size:28px;margin-bottom:6px;">42px / 500</div><div style="font-size:25px;line-height:1.55;color:#5c5f77;">枚内の区切り。罫線は付けない</div></div>
-      </div>
-      <div style="display:grid;grid-template-columns:120px 1fr;column-gap:32px;align-items:baseline;padding:14px 0;border-top:1px solid #8c8fa1;border-bottom:1px solid #8c8fa1;">
-        <span style="font-size:30px;font-weight:500;color:#10797a;">ラベル</span>
-        <div><div style="font-size:28px;margin-bottom:6px;">26px / 字間 0.14em / teal</div><div style="font-size:25px;line-height:1.55;color:#5c5f77;">階層の外。h4 ではなく、色の役割「構造」の一種としてカラム名・分類名を示す</div></div>
-      </div>
-      <p style="font-size:26px;line-height:1.6;color:#5c5f77;margin:28px 0 0 0;">h1&ndash;h3 が序列、ラベルはその外側で名前を示すだけ。</p>
-    </div>
-    <div style="background:#8c8fa1;"></div>
-    <div style="display:flex;flex-direction:column;">
-      <div style="font-size:26px;letter-spacing:0.14em;color:#10797a;margin-bottom:32px;">実例</div>
-      <h3 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:42px;font-weight:500;line-height:1.35;margin:0 0 24px 0;color:#4c4f69;">階層は三段で足りる</h3>
-      <p style="font-size:30px;line-height:1.7;color:#4c4f69;margin:0 0 44px 0;">段を増やすと、読み手は上下関係の推測に時間を使う。段の数ではなく余白の差で示す。</p>
-      <div style="font-size:26px;letter-spacing:0.14em;color:#10797a;margin-bottom:18px;">補足</div>
-      <p style="font-size:28px;line-height:1.65;color:#5c5f77;margin:0;">この「実例」「補足」がラベル。h3 より小さいが下位ではない。太字にせず、teal と字間だけで区別する。</p>
-    </div>
-  </div>
-  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>18</span>
-  </div>
-</section>
-
-<section data-label="リストと番号" data-speaker-notes="箇条書きは teal の小さな正方形、第二階層は横罫。番号付きは二桁ぞろえで罫線区切り。どちらも五項目まで。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
+<section data-label="リスト" data-speaker-notes="箇条書きは teal の小さな正方形、第二階層は横罫。番号付きは左端の縦線に teal の数字をぶら下げる。どちらも五項目まで。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
   <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">リストと番号付きリスト</h2>
   <div style="height:1px;background:#8c8fa1;margin-bottom:48px;"></div>
   <div style="display:grid;grid-template-columns:1fr 1px 1fr;column-gap:80px;flex:1;min-height:0;">
@@ -546,86 +160,37 @@
     <div style="background:#8c8fa1;"></div>
     <div style="display:flex;flex-direction:column;">
       <div style="font-size:26px;letter-spacing:0.14em;color:#10797a;margin-bottom:36px;">番号付き</div>
-      <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;">
-        <li style="display:grid;grid-template-columns:78px 1fr;column-gap:28px;align-items:baseline;padding:22px 0;border-top:1px solid #8c8fa1;">
-          <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;color:#10797a;font-variant-numeric:tabular-nums;">01</span>
-          <span style="font-size:32px;line-height:1.55;">手順・優先度があるときだけ番号を振る</span>
-        </li>
-        <li style="display:grid;grid-template-columns:78px 1fr;column-gap:28px;align-items:baseline;padding:22px 0;border-top:1px solid #8c8fa1;">
-          <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;color:#10797a;font-variant-numeric:tabular-nums;">02</span>
-          <span style="font-size:32px;line-height:1.55;">二桁ぞろえ。桁で頭が揃う</span>
-        </li>
-        <li style="display:grid;grid-template-columns:78px 1fr;column-gap:28px;align-items:baseline;padding:22px 0;border-top:1px solid #8c8fa1;">
-          <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;color:#10797a;font-variant-numeric:tabular-nums;">03</span>
-          <span style="font-size:32px;line-height:1.55;">項目間は罫線で区切り、記号は足さない</span>
-        </li>
-        <li style="display:grid;grid-template-columns:78px 1fr;column-gap:28px;align-items:baseline;padding:22px 0;border-top:1px solid #8c8fa1;border-bottom:1px solid #8c8fa1;">
-          <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;color:#10797a;font-variant-numeric:tabular-nums;">04</span>
-          <span style="font-size:32px;line-height:1.55;">五項目を超えたら図解か表に移す</span>
-        </li>
-      </ol>
-      <p style="font-size:26px;line-height:1.6;color:#5c5f77;margin:32px 0 0 0;">行間は 1.55&ndash;1.6。項目間の空きは行間より広く取る。</p>
+      <div style="position:relative;padding-left:34px;">
+        <div style="position:absolute;left:0;top:0;bottom:0;width:1px;background:#8c8fa1;"></div>
+        <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:26px;">
+          <li style="display:grid;grid-template-columns:44px 1fr;column-gap:26px;align-items:start;">
+            <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;font-weight:500;line-height:1;color:#10797a;font-variant-numeric:tabular-nums;padding:11px 0;">01</span>
+            <span style="font-size:32px;line-height:1.6;">手順・優先度があるときだけ番号を振る</span>
+          </li>
+          <li style="display:grid;grid-template-columns:44px 1fr;column-gap:26px;align-items:start;">
+            <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;font-weight:500;line-height:1;color:#10797a;font-variant-numeric:tabular-nums;padding:11px 0;">02</span>
+            <span style="font-size:32px;line-height:1.6;">左の縦線に番号をぶら下げる</span>
+          </li>
+          <li style="display:grid;grid-template-columns:44px 1fr;column-gap:26px;align-items:start;">
+            <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;font-weight:500;line-height:1;color:#10797a;font-variant-numeric:tabular-nums;padding:11px 0;">03</span>
+            <span style="font-size:32px;line-height:1.6;">二桁ぞろえ。桁で頭が揃う</span>
+          </li>
+          <li style="display:grid;grid-template-columns:44px 1fr;column-gap:26px;align-items:start;">
+            <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;font-weight:500;line-height:1;color:#10797a;font-variant-numeric:tabular-nums;padding:11px 0;">04</span>
+            <span style="font-size:32px;line-height:1.6;">五項目を超えたら図解か表に移す</span>
+          </li>
+        </ol>
+      </div>
+      <p style="font-size:26px;line-height:1.6;color:#5c5f77;margin:32px 0 0 0;">左端の縦線一本で連なりを示す。横罫は引かない。</p>
     </div>
   </div>
   <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
     <span>PRESENTATION TEMPLATE</span>
-    <span>19</span>
+    <span>06</span>
   </div>
 </section>
 
-<section data-label="インデント" data-speaker-notes="インデントは grid の列で作る。字下げはしない。刻みは 48px、二段まで。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">インデント</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:44px;"></div>
-  <div style="display:grid;grid-template-columns:1.15fr 1px 1fr;column-gap:80px;flex:1;min-height:0;">
-    <div style="display:flex;flex-direction:column;">
-      <div style="font-size:26px;letter-spacing:0.14em;color:#10797a;margin-bottom:28px;">刻み</div>
-      <div style="position:relative;padding-top:34px;">
-        <div style="position:absolute;left:0;top:0;bottom:0;width:1px;background:#bcc0cc;"></div>
-        <div style="position:absolute;left:48px;top:0;bottom:0;width:1px;background:#bcc0cc;"></div>
-        <div style="position:absolute;left:96px;top:0;bottom:0;width:1px;background:#bcc0cc;"></div>
-        <div style="position:absolute;left:0;top:0;font-size:22px;color:#10797a;font-variant-numeric:tabular-nums;">0</div>
-        <div style="position:absolute;left:48px;top:0;font-size:22px;color:#10797a;font-variant-numeric:tabular-nums;padding-left:8px;">48</div>
-        <div style="position:absolute;left:96px;top:0;font-size:22px;color:#10797a;font-variant-numeric:tabular-nums;padding-left:8px;">96</div>
-        <div style="padding-left:20px;font-size:30px;line-height:1.6;margin-bottom:22px;">本文。段落の頭は下げない</div>
-        <div style="display:grid;grid-template-columns:26px 1fr;column-gap:22px;align-items:start;padding-left:48px;margin-bottom:16px;">
-          <span style="width:11px;height:11px;background:#10797a;margin-top:15px;"></span>
-          <span style="font-size:30px;line-height:1.6;">第一階層。記号が 48px の列に載る</span>
-        </div>
-        <div style="display:grid;grid-template-columns:26px 1fr;column-gap:22px;align-items:start;padding-left:96px;">
-          <span style="width:16px;height:1px;background:#8c8fa1;margin-top:18px;"></span>
-          <span style="font-size:28px;line-height:1.6;color:#5c5f77;">第二階層。ここで止める</span>
-        </div>
-      </div>
-      <p style="font-size:26px;line-height:1.6;color:#5c5f77;margin:32px 0 0 0;">列幅で決まっているのは、番号列 78px とラベル列 96px の二つだけ。</p>
-    </div>
-    <div style="background:#8c8fa1;"></div>
-    <div style="display:flex;flex-direction:column;">
-      <div style="font-size:26px;letter-spacing:0.14em;color:#10797a;margin-bottom:28px;">規則</div>
-      <div style="display:grid;grid-template-columns:78px 1fr;column-gap:28px;align-items:baseline;padding:16px 0;border-top:1px solid #8c8fa1;">
-        <span style="font-size:28px;color:#10797a;font-variant-numeric:tabular-nums;">01</span>
-        <div><div style="font-size:30px;font-weight:500;margin-bottom:8px;">字下げはしない</div><div style="font-size:25px;line-height:1.55;color:#5c5f77;">段落頭の一字下げを入れない。段落は空きで分ける</div></div>
-      </div>
-      <div style="display:grid;grid-template-columns:78px 1fr;column-gap:28px;align-items:baseline;padding:16px 0;border-top:1px solid #bcc0cc;">
-        <span style="font-size:28px;color:#10797a;font-variant-numeric:tabular-nums;">02</span>
-        <div><div style="font-size:30px;font-weight:500;margin-bottom:8px;">grid の列で作る</div><div style="font-size:25px;line-height:1.55;color:#5c5f77;">記号と本文を別の列に置く。折り返しても頭が揃う</div></div>
-      </div>
-      <div style="display:grid;grid-template-columns:78px 1fr;column-gap:28px;align-items:baseline;padding:16px 0;border-top:1px solid #bcc0cc;">
-        <span style="font-size:28px;color:#10797a;font-variant-numeric:tabular-nums;">03</span>
-        <div><div style="font-size:30px;font-weight:500;margin-bottom:8px;">刻みは 48px、二段まで</div><div style="font-size:25px;line-height:1.55;color:#5c5f77;">三段目が要るなら、スライドを割るか表にする</div></div>
-      </div>
-      <div style="display:grid;grid-template-columns:78px 1fr;column-gap:28px;align-items:baseline;padding:16px 0;border-top:1px solid #bcc0cc;border-bottom:1px solid #8c8fa1;">
-        <span style="font-size:28px;color:#10797a;font-variant-numeric:tabular-nums;">04</span>
-        <div><div style="font-size:30px;font-weight:500;margin-bottom:8px;">塊は下げない</div><div style="font-size:25px;line-height:1.55;color:#5c5f77;">引用・コード・表・図は版面幅のまま。左に寄せて逃げない</div></div>
-      </div>
-    </div>
-  </div>
-  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
-    <span>PRESENTATION TEMPLATE</span>
-    <span>20</span>
-  </div>
-</section>
-
-<section data-label="数値の表" data-speaker-notes="数値表。文字列は左、数値は右、単位は見出しへ。増減だけ maroon を一列に許す。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
+<section data-label="表組み" data-speaker-notes="数値表。文字列は左、数値は右、単位は見出しへ。増減だけ maroon を一列に許す。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
   <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">数値を含む表</h2>
   <div style="height:1px;background:#8c8fa1;margin-bottom:44px;"></div>
   <p style="font-size:32px;line-height:1.6;color:#5c5f77;margin:0 0 44px 0;max-width:1500px;">文字列は左、数値は右。単位は見出しに出して、桁の並びを乱さない。</p>
@@ -672,7 +237,7 @@
   </div>
   <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
     <span>PRESENTATION TEMPLATE</span>
-    <span>21</span>
+    <span>07</span>
   </div>
 </section>
 
@@ -690,80 +255,244 @@
     <div style="display:grid;grid-template-columns:64px 1fr;column-gap:24px;align-items:baseline;"><span data-tex="p(\theta)" style="font-size:32px;">p(θ)</span><span style="font-size:26px;line-height:1.55;color:#5c5f77;">事前分布</span></div>
   </div>
   <div style="margin-top:32px;border-top:1px solid #8c8fa1;padding-top:20px;display:grid;grid-template-columns:1.45fr 1fr 1fr;column-gap:56px;">
-    <div style="font-size:26px;line-height:1.6;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">KaTeX を CDN で読む。</strong>式は <code style="font-family:'JetBrains Mono',monospace;font-size:23px;background:rgba(76,79,105,0.10);padding:0.1em 0.35em;">data-tex</code> 属性に書く</div>
+    <div style="font-size:26px;line-height:1.6;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">KaTeX を CDN で読む。</strong>式は <code style="font-family:'JetBrains Mono',monospace;font-size:24px;background:rgba(76,79,105,0.10);border-radius:8px;padding:0.1em 0.4em;">data-tex</code> 属性に書く</div>
     <div style="font-size:26px;line-height:1.6;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">独立式は一枚に一つ。</strong>番号は参照するときだけ</div>
     <div style="font-size:26px;line-height:1.6;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">記号の説明は式の下。</strong>本文中で言い換えない</div>
   </div>
   <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
     <span>PRESENTATION TEMPLATE</span>
-    <span>22</span>
+    <span>08</span>
   </div>
 </section>
 
-<section data-label="カード" data-speaker-notes="カードは三型だけ。罫線カードが既定、上罫のみは軽い並列、反転は一枚に一つまで。角丸と影は使わない。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">カードの三型</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:52px;"></div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);column-gap:56px;">
-    <div style="border:1px solid #4c4f69;padding:40px 36px;display:flex;flex-direction:column;min-height:292px;">
-      <div style="font-size:24px;letter-spacing:0.14em;color:#10797a;margin-bottom:24px;">TYPE A</div>
-      <div style="font-size:36px;font-weight:500;line-height:1.4;margin-bottom:18px;">罫線カード</div>
-      <div style="font-size:27px;line-height:1.6;color:#5c5f77;">既定の型。図解の箱と同じ 1px の枠。三つか四つ並べる。</div>
-      <div style="margin-top:auto;padding-top:28px;font-size:25px;color:#6c6f85;">枠を持つ最小単位</div>
+<section data-label="図解" data-speaker-notes="図解。箱は角丸 32px の 2px 枠、番号は円。接続は丸端の横線と teal の丸。最終段だけ地を反転させ、流れの着地点を示す（反転は一枚に一つ、途中の段には使わない）。Mermaid を使わずに手で組む前提。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
+  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">制作の流れ</h2>
+  <div style="height:1px;background:#8c8fa1;margin-bottom:0;"></div>
+  <div style="flex:1;min-height:0;display:flex;align-items:center;">
+  <div style="width:100%;display:grid;grid-template-columns:1fr 56px 1fr 56px 1fr 56px 1fr;align-items:stretch;">
+    <div style="border:2px solid #4c4f69;border-radius:32px;padding:34px 34px 36px;display:flex;flex-direction:column;justify-content:space-between;min-height:270px;">
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;font-weight:500;color:#10797a;width:52px;height:52px;border:2px solid #10797a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:22px;">01</div>
+      <div>
+        <div style="font-size:36px;font-weight:700;margin-bottom:12px;">構成</div>
+        <div style="font-size:26px;line-height:1.6;color:#5c5f77;">見出しだけを並べ、筋を確認する</div>
+      </div>
     </div>
-    <div style="border-top:3px solid #4c4f69;padding:36px 0 0 0;display:flex;flex-direction:column;min-height:292px;">
-      <div style="font-size:24px;letter-spacing:0.14em;color:#10797a;margin-bottom:24px;">TYPE B</div>
-      <div style="font-size:36px;font-weight:500;line-height:1.4;margin-bottom:18px;">上罫のみ</div>
-      <div style="font-size:27px;line-height:1.6;color:#5c5f77;">枠で囲まず、頭の罫線だけで区切る。文章量が多いときの既定。</div>
-      <div style="margin-top:auto;padding-top:28px;font-size:25px;color:#6c6f85;">五つ以上の並列に</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:6px;"><div style="width:100%;height:3px;border-radius:2px;background:#8c8fa1;"></div><div style="width:12px;height:12px;border-radius:50%;background:#10797a;flex:none;"></div></div>
+    <div style="border:2px solid #4c4f69;border-radius:32px;padding:34px 34px 36px;display:flex;flex-direction:column;justify-content:space-between;min-height:270px;">
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;font-weight:500;color:#10797a;width:52px;height:52px;border:2px solid #10797a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:22px;">02</div>
+      <div>
+        <div style="font-size:36px;font-weight:700;margin-bottom:12px;">原稿</div>
+        <div style="font-size:26px;line-height:1.6;color:#5c5f77;">一枚あたりの文字数を決めて書く</div>
+      </div>
     </div>
-    <div style="background:#4c4f69;color:#eff1f5;padding:40px 36px;display:flex;flex-direction:column;min-height:292px;">
-      <div style="font-size:24px;letter-spacing:0.14em;color:#94e2d5;margin-bottom:24px;">TYPE C</div>
-      <div style="font-size:36px;font-weight:500;line-height:1.4;margin-bottom:18px;">反転カード</div>
-      <div style="font-size:27px;line-height:1.6;color:#ccd0da;">墨地で一つだけ持ち上げる。結論・現在地・到達点に使う。</div>
-      <div style="margin-top:auto;padding-top:28px;font-size:25px;color:#a5adcb;">一枚に一つまで</div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:6px;"><div style="width:100%;height:3px;border-radius:2px;background:#8c8fa1;"></div><div style="width:12px;height:12px;border-radius:50%;background:#10797a;flex:none;"></div></div>
+    <div style="border:2px solid #4c4f69;border-radius:32px;padding:34px 34px 36px;display:flex;flex-direction:column;justify-content:space-between;min-height:270px;">
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;font-weight:500;color:#10797a;width:52px;height:52px;border:2px solid #10797a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:22px;">03</div>
+      <div>
+        <div style="font-size:36px;font-weight:700;margin-bottom:12px;">実装</div>
+        <div style="font-size:26px;line-height:1.6;color:#5c5f77;">レイアウトを選び、寸法を詰める</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:6px;"><div style="width:100%;height:3px;border-radius:2px;background:#8c8fa1;"></div><div style="width:12px;height:12px;border-radius:50%;background:#10797a;flex:none;"></div></div>
+    <div style="border:2px solid #4c4f69;border-radius:32px;padding:34px 34px 36px;display:flex;flex-direction:column;justify-content:space-between;min-height:270px;background:#4c4f69;color:#eff1f5;border-color:#4c4f69;">
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;font-weight:700;color:#4c4f69;width:52px;height:52px;background:#f2cdcd;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:22px;">04</div>
+      <div>
+        <div style="font-size:36px;font-weight:700;margin-bottom:12px;">出力</div>
+        <div style="font-size:26px;line-height:1.6;color:#ccd0da;">画面・PDF・PPTX を同じ原稿から</div>
+      </div>
     </div>
   </div>
-  <div style="margin-top:48px;display:flex;flex-direction:column;">
-    <div style="display:grid;grid-template-columns:220px 1fr;column-gap:48px;align-items:baseline;padding:20px 0;border-top:1px solid #8c8fa1;">
-      <span style="font-size:28px;font-weight:500;">中身の順序</span>
-      <span style="font-size:27px;line-height:1.6;color:#5c5f77;">ラベル（teal・24px）→ 見出し（36px / 500）→ 本文（27px）→ 下端に補足。四段目は置かない。</span>
+  </div>
+  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
+    <span>PRESENTATION TEMPLATE</span>
+    <span>09</span>
+  </div>
+</section>
+
+<section data-label="図表・SVG" data-speaker-notes="図表パレットの実例。ブランチ図は SVG で組む。線と丸だけで、影も矢印の飾りも付けない。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
+  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">ブランチ戦略</h2>
+  <div style="height:1px;background:#8c8fa1;margin-bottom:40px;"></div>
+  <svg viewBox="0 0 1680 470" style="width:100%;height:auto;font-family:'M PLUS Rounded 1c',sans-serif;">
+    <g stroke-linecap="round" fill="none" stroke-width="4">
+      <path d="M260 60 H1560" stroke="#1e66f5"/>
+      <path d="M260 60 C310 60 310 290 360 290" stroke="#10797a"/>
+      <path d="M360 290 H1560" stroke="#10797a"/>
+      <path d="M420 290 C470 290 470 405 520 405" stroke="#8839ef"/>
+      <path d="M520 405 H740" stroke="#8839ef"/>
+      <path d="M740 405 C830 405 830 290 920 290" stroke="#8839ef"/>
+      <path d="M920 290 C970 290 970 175 1020 175" stroke="#df8e1d"/>
+      <path d="M1020 175 H1120" stroke="#df8e1d"/>
+      <path d="M1120 175 C1180 175 1180 60 1240 60" stroke="#df8e1d"/>
+      <path d="M1120 175 C1260 175 1280 290 1400 290" stroke="#df8e1d"/>
+    </g>
+    <g fill="#eff1f5" stroke-width="4">
+      <circle cx="260" cy="60" r="13" stroke="#1e66f5"/><circle cx="1240" cy="60" r="13" stroke="#1e66f5"/>
+      <circle cx="360" cy="290" r="13" stroke="#10797a"/><circle cx="420" cy="290" r="13" stroke="#10797a"/><circle cx="920" cy="290" r="13" stroke="#10797a"/><circle cx="1400" cy="290" r="13" stroke="#10797a"/><circle cx="1560" cy="290" r="13" stroke="#10797a"/>
+      <circle cx="520" cy="405" r="13" stroke="#8839ef"/><circle cx="620" cy="405" r="13" stroke="#8839ef"/><circle cx="740" cy="405" r="13" stroke="#8839ef"/>
+      <circle cx="1020" cy="175" r="13" stroke="#df8e1d"/><circle cx="1120" cy="175" r="13" stroke="#df8e1d"/>
+    </g>
+    <g font-size="28" fill="#4c4f69" text-anchor="end">
+      <text x="180" y="70">main</text><text x="180" y="185">release</text><text x="180" y="300">develop</text><text x="180" y="415">feature</text>
+    </g>
+    <g font-size="24" fill="#6c6f85">
+      <text x="260" y="30">v0.1</text><text x="1216" y="30">v1.0</text>
+      <text x="920" y="252">merge</text><text x="1400" y="252">back-merge</text>
+    </g>
+  </svg>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);column-gap:48px;margin-top:44px;border-top:1px solid #8c8fa1;padding-top:28px;">
+    <div style="display:grid;grid-template-columns:20px 1fr;column-gap:20px;align-items:start;"><div style="width:20px;height:20px;background:#1e66f5;margin-top:8px;"></div><div style="font-size:26px;line-height:1.55;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">main</strong><br>公開済み。タグを打つ</div></div>
+    <div style="display:grid;grid-template-columns:20px 1fr;column-gap:20px;align-items:start;"><div style="width:20px;height:20px;background:#10797a;margin-top:8px;"></div><div style="font-size:26px;line-height:1.55;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">develop</strong><br>常に最新。統合先</div></div>
+    <div style="display:grid;grid-template-columns:20px 1fr;column-gap:20px;align-items:start;"><div style="width:20px;height:20px;background:#df8e1d;margin-top:8px;"></div><div style="font-size:26px;line-height:1.55;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">release</strong><br>短命。凍結して仕上げ</div></div>
+    <div style="display:grid;grid-template-columns:20px 1fr;column-gap:20px;align-items:start;"><div style="width:20px;height:20px;background:#8839ef;margin-top:8px;"></div><div style="font-size:26px;line-height:1.55;color:#5c5f77;"><strong style="font-weight:700;color:#4c4f69;">feature</strong><br>派生。develop へ戻す</div></div>
+  </div>
+  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
+    <span>PRESENTATION TEMPLATE</span>
+    <span>10</span>
+  </div>
+</section>
+
+<section data-label="棒グラフ" data-speaker-notes="棒グラフ。div の height だけで作る。棒は teal、注目させたい一本だけ maroon。目盛り線は引かず、基線一本と数値ラベルで足す。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
+  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">棒グラフ</h2>
+  <div style="height:1px;background:#8c8fa1;margin-bottom:20px;"></div>
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;padding-bottom:20px;">
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);column-gap:56px;align-items:end;height:440px;border-bottom:1px solid #8c8fa1;">
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;">
+        <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;font-weight:700;color:#10797a;font-variant-numeric:tabular-nums;margin-bottom:14px;">12</div>
+        <div style="width:100%;max-width:150px;height:33%;background:#10797a;border-radius:12px 12px 0 0;"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;">
+        <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;font-weight:700;color:#10797a;font-variant-numeric:tabular-nums;margin-bottom:14px;">18</div>
+        <div style="width:100%;max-width:150px;height:50%;background:#10797a;border-radius:12px 12px 0 0;"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;">
+        <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;font-weight:700;color:#10797a;font-variant-numeric:tabular-nums;margin-bottom:14px;">15</div>
+        <div style="width:100%;max-width:150px;height:42%;background:#10797a;border-radius:12px 12px 0 0;"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;">
+        <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;font-weight:700;color:#10797a;font-variant-numeric:tabular-nums;margin-bottom:14px;">24</div>
+        <div style="width:100%;max-width:150px;height:67%;background:#10797a;border-radius:12px 12px 0 0;"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;">
+        <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;font-weight:700;color:#e64553;font-variant-numeric:tabular-nums;margin-bottom:14px;">31</div>
+        <div style="width:100%;max-width:150px;height:86%;background:#e64553;border-radius:12px 12px 0 0;"></div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;">
+        <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:30px;font-weight:700;color:#10797a;font-variant-numeric:tabular-nums;margin-bottom:14px;">28</div>
+        <div style="width:100%;max-width:150px;height:78%;background:#10797a;border-radius:12px 12px 0 0;"></div>
+      </div>
     </div>
-    <div style="display:grid;grid-template-columns:220px 1fr;column-gap:48px;align-items:baseline;padding:20px 0;border-top:1px solid #8c8fa1;">
-      <span style="font-size:28px;font-weight:500;">寸法</span>
-      <span style="font-size:27px;line-height:1.6;color:#5c5f77;">内側は 40px / 36px、列間は 56px。高さは grid で揃え、内容で伸ばさない。</span>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);column-gap:56px;padding-top:22px;">
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:28px;color:#5c5f77;text-align:center;">4月</div>
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:28px;color:#5c5f77;text-align:center;">5月</div>
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:28px;color:#5c5f77;text-align:center;">6月</div>
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:28px;color:#5c5f77;text-align:center;">7月</div>
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:28px;color:#5c5f77;text-align:center;">8月</div>
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:28px;color:#5c5f77;text-align:center;">9月</div>
     </div>
-    <div style="display:grid;grid-template-columns:220px 1fr;column-gap:48px;align-items:baseline;padding:20px 0;border-top:1px solid #8c8fa1;border-bottom:1px solid #8c8fa1;">
-      <span style="font-size:28px;font-weight:500;">禁止</span>
-      <span style="font-size:27px;line-height:1.6;color:#5c5f77;">角丸・影・色地・左端のアクセント線。カードは枠であって装飾ではない。</span>
+    <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:26px;line-height:1.6;color:#5c5f77;margin-top:40px;">棒は <code style="font-family:'JetBrains Mono',monospace;font-size:24px;background:rgba(76,79,105,0.10);border-radius:8px;padding:0.1em 0.4em;">height</code> 指定の <code style="font-family:'JetBrains Mono',monospace;font-size:24px;background:rgba(76,79,105,0.10);border-radius:8px;padding:0.1em 0.4em;">div</code>。目盛り線は引かず、基線一本と数値で読ませる。</div>
+  </div>
+  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
+    <span>PRESENTATION TEMPLATE</span>
+    <span>11</span>
+  </div>
+</section>
+
+<section data-label="線グラフ" data-speaker-notes="線グラフ。inline SVG の polyline で組む。系列は二本まで、線は 4px の丸端、頂点は地色で抜いた丸。横の目盛り線は内部罫、基線だけ枠罫。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
+  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">線グラフ</h2>
+  <div style="height:1px;background:#8c8fa1;margin-bottom:20px;"></div>
+  <div style="flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center;padding-bottom:20px;">
+    <div style="display:flex;gap:48px;margin-bottom:24px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:28px;color:#5c5f77;">
+      <span style="display:flex;align-items:center;gap:14px;"><span style="width:34px;height:4px;border-radius:2px;background:#10797a;"></span>スライド枚数</span>
+      <span style="display:flex;align-items:center;gap:14px;"><span style="width:34px;height:4px;border-radius:2px;background:#e64553;"></span>使い回した枚数</span>
+    </div>
+    <svg viewBox="0 0 1680 460" style="width:100%;height:auto;font-family:'M PLUS Rounded 1c',sans-serif;">
+      <g><line x1="96" y1="396" x2="1640" y2="396" stroke="#8c8fa1" stroke-width="1"/><text x="72" y="406" text-anchor="end" font-size="26" fill="#6c6f85">0</text><line x1="96" y1="305" x2="1640" y2="305" stroke="#bcc0cc" stroke-width="1"/><text x="72" y="315" text-anchor="end" font-size="26" fill="#6c6f85">20</text><line x1="96" y1="213" x2="1640" y2="213" stroke="#bcc0cc" stroke-width="1"/><text x="72" y="223" text-anchor="end" font-size="26" fill="#6c6f85">40</text><line x1="96" y1="122" x2="1640" y2="122" stroke="#bcc0cc" stroke-width="1"/><text x="72" y="132" text-anchor="end" font-size="26" fill="#6c6f85">60</text><line x1="96" y1="30" x2="1640" y2="30" stroke="#bcc0cc" stroke-width="1"/><text x="72" y="40" text-anchor="end" font-size="26" fill="#6c6f85">80</text></g>
+      <polyline points="96,314 405,277 714,240 1022,190 1331,131 1640,67" fill="none" stroke="#10797a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <polyline points="96,341 405,327 714,300 1022,286 1331,259 1640,245" fill="none" stroke="#e64553" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="96" cy="314" r="9" fill="#eff1f5" stroke="#10797a" stroke-width="4"/><circle cx="405" cy="277" r="9" fill="#eff1f5" stroke="#10797a" stroke-width="4"/><circle cx="714" cy="240" r="9" fill="#eff1f5" stroke="#10797a" stroke-width="4"/><circle cx="1022" cy="190" r="9" fill="#eff1f5" stroke="#10797a" stroke-width="4"/><circle cx="1331" cy="131" r="9" fill="#eff1f5" stroke="#10797a" stroke-width="4"/><circle cx="1640" cy="67" r="9" fill="#eff1f5" stroke="#10797a" stroke-width="4"/>
+      <circle cx="96" cy="341" r="9" fill="#eff1f5" stroke="#e64553" stroke-width="4"/><circle cx="405" cy="327" r="9" fill="#eff1f5" stroke="#e64553" stroke-width="4"/><circle cx="714" cy="300" r="9" fill="#eff1f5" stroke="#e64553" stroke-width="4"/><circle cx="1022" cy="286" r="9" fill="#eff1f5" stroke="#e64553" stroke-width="4"/><circle cx="1331" cy="259" r="9" fill="#eff1f5" stroke="#e64553" stroke-width="4"/><circle cx="1640" cy="245" r="9" fill="#eff1f5" stroke="#e64553" stroke-width="4"/>
+      <g><text x="96" y="442" text-anchor="middle" font-size="28" fill="#5c5f77">4月</text><text x="405" y="442" text-anchor="middle" font-size="28" fill="#5c5f77">5月</text><text x="714" y="442" text-anchor="middle" font-size="28" fill="#5c5f77">6月</text><text x="1022" y="442" text-anchor="middle" font-size="28" fill="#5c5f77">7月</text><text x="1331" y="442" text-anchor="middle" font-size="28" fill="#5c5f77">8月</text><text x="1640" y="442" text-anchor="middle" font-size="28" fill="#5c5f77">9月</text></g>
+    </svg>
+    <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:26px;line-height:1.6;color:#5c5f77;margin-top:32px;">系列は二本まで。凡例は図の上に置き、線に直接ラベルを添えない。</div>
+  </div>
+  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
+    <span>PRESENTATION TEMPLATE</span>
+    <span>12</span>
+  </div>
+</section>
+
+<section data-label="数値の強調" data-speaker-notes="数値スライド。桁は明朝の大きな字で、単位と説明は小さく添える。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
+  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">組み版の基準値</h2>
+  <div style="height:1px;background:#8c8fa1;margin-bottom:72px;"></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;column-gap:80px;">
+    <div>
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:128px;font-weight:700;line-height:1;letter-spacing:-0.01em;margin-bottom:28px;">120<span style="font-size:48px;color:#6c6f85;">px</span></div>
+      <div style="height:1px;background:#8c8fa1;margin-bottom:24px;"></div>
+      <div style="font-size:28px;line-height:1.6;color:#5c5f77;">左右の余白。ここを削ると一気に窮屈になる。</div>
+    </div>
+    <div>
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:128px;font-weight:700;line-height:1;letter-spacing:-0.01em;margin-bottom:28px;">34<span style="font-size:48px;color:#6c6f85;">px</span></div>
+      <div style="height:1px;background:#8c8fa1;margin-bottom:24px;"></div>
+      <div style="font-size:28px;line-height:1.6;color:#5c5f77;">本文の下限。会場の後方から読める最小値。</div>
+    </div>
+    <div>
+      <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:128px;font-weight:700;line-height:1;letter-spacing:-0.01em;margin-bottom:28px;">2<span style="font-size:48px;color:#6c6f85;">色</span></div>
+      <div style="height:1px;background:#8c8fa1;margin-bottom:24px;"></div>
+      <div style="font-size:28px;line-height:1.6;color:#5c5f77;">差し色は主張の maroon と構造の teal。役割を分ける。</div>
     </div>
   </div>
   <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
     <span>PRESENTATION TEMPLATE</span>
-    <span>23</span>
+    <span>13</span>
   </div>
 </section>
 
-<section data-label="まとめ" data-speaker-notes="締め。持ち帰ってほしい三行だけを残す。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
-  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">運用の三原則</h2>
-  <div style="height:1px;background:#8c8fa1;margin-bottom:64px;"></div>
-  <div style="display:flex;flex-direction:column;gap:0;">
-    <div style="display:grid;grid-template-columns:120px 1fr;column-gap:40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #8c8fa1;">
-      <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:64px;font-weight:700;line-height:1;color:#e64553;">一</span>
-      <div style="font-size:38px;line-height:1.5;">レイアウトは増やさない。足りなければ内容を削る。</div>
+<section data-label="画像" data-speaker-notes="画像レイアウト。説明と枠は垂直中央で揃える。写真は右の枠に原寸比で落とし、文字は重ねない。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
+  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">図版を置く枠</h2>
+  <div style="height:1px;background:#8c8fa1;margin-bottom:20px;"></div>
+  <div style="display:grid;grid-template-columns:1fr 1.5fr;column-gap:80px;align-items:center;flex:1;min-height:0;padding-bottom:40px;">
+    <div>
+      <p style="font-size:34px;line-height:1.7;color:#4c4f69;margin:0 0 32px 0;">スクリーンショットや図は、原寸比のまま枠に収める。文字を上に重ねない。</p>
+      <p style="font-size:28px;line-height:1.65;color:#5c5f77;margin:0;">説明は左に置き、視線を左から右へ一方向に流す。</p>
     </div>
-    <div style="display:grid;grid-template-columns:120px 1fr;column-gap:40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #8c8fa1;">
-      <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:64px;font-weight:700;line-height:1;color:#e64553;">二</span>
-      <div style="font-size:38px;line-height:1.5;">差し色は二色。主張に maroon、構造に teal と決めて使う。</div>
-    </div>
-    <div style="display:grid;grid-template-columns:120px 1fr;column-gap:40px;align-items:baseline;padding:34px 0;border-bottom:1px solid #8c8fa1;">
-      <span style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:64px;font-weight:700;line-height:1;color:#e64553;">三</span>
-      <div style="font-size:38px;line-height:1.5;">寸法は直接書く。抽象を挟むのは繰り返しが出てから。</div>
+    <div style="position:relative;height:100%;max-height:520px;border:1px solid #4c4f69;">
+      <image-slot id="tpl-image-13" shape="rect" fit="contain" placeholder="図版をここにドロップ"></image-slot>
     </div>
   </div>
   <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
     <span>PRESENTATION TEMPLATE</span>
-    <span>24</span>
+    <span>14</span>
   </div>
+</section>
+
+<section data-label="コード" data-speaker-notes="コードスライド。墨地のパネルは角丸 32px、枠飾りなし。パネルは説明と垂直中央で揃える。行数は12行を上限に。" style="background:#eff1f5;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:96px 120px 84px;box-sizing:border-box;display:flex;flex-direction:column;">
+  <h2 style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:68px;font-weight:700;line-height:1.25;margin:0 0 20px 0;color:#4c4f69;">一枚の書き方</h2>
+  <div style="height:1px;background:#8c8fa1;margin-bottom:20px;"></div>
+  <div style="display:grid;grid-template-columns:1fr 1.5fr;column-gap:80px;align-items:center;flex:1;min-height:0;padding-bottom:40px;">
+    <div style="font-size:30px;line-height:1.75;color:#4c4f69;">
+      <p style="margin:0 0 28px 0;">スライドは <code style="font-family:'JetBrains Mono',monospace;font-size:26px;background:rgba(76,79,105,0.10);border-radius:8px;padding:0.1em 0.4em;">section</code> 一つ。属性で見出しと読み上げ原稿を持たせる。</p>
+      <p style="margin:0;color:#5c5f77;font-size:28px;">記法を覚える代わりに、寸法をそのまま書く。ここが Marp との一番の違い。</p>
+    </div>
+    <div style="background:#4c4f69;color:#eff1f5;border-radius:32px;padding:44px 48px;font-family:'JetBrains Mono',monospace;font-size:24px;line-height:1.8;">
+      <div style="white-space:pre;"><span style="color:#b4befe;">&lt;section</span> <span style="color:#f9e2af;">data-label</span>=<span style="color:#a6e3a1;">"標準"</span></div>
+      <div style="white-space:pre;">         <span style="color:#f9e2af;">data-speaker-notes</span>=<span style="color:#a6e3a1;">"..."</span></div>
+      <div style="white-space:pre;">         <span style="color:#f9e2af;">style</span>=<span style="color:#a6e3a1;">"padding:96px 120px 84px"</span><span style="color:#b4befe;">&gt;</span></div>
+      <div style="white-space:pre;">  <span style="color:#b4befe;">&lt;h2&gt;</span>見出し<span style="color:#b4befe;">&lt;/h2&gt;</span></div>
+      <div style="white-space:pre;">  <span style="color:#b4befe;">&lt;div</span> <span style="color:#f9e2af;">style</span>=<span style="color:#a6e3a1;">"height:1px;background:#8c8fa1"</span><span style="color:#b4befe;">&gt;&lt;/div&gt;</span></div>
+      <div style="white-space:pre;">  <span style="color:#b4befe;">&lt;p&gt;</span>本文<span style="color:#b4befe;">&lt;/p&gt;</span></div>
+      <div style="white-space:pre;"><span style="color:#b4befe;">&lt;/section&gt;</span></div>
+    </div>
+  </div>
+  <div style="margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid #8c8fa1;padding-top:22px;font-family:'M PLUS Rounded 1c',sans-serif;font-size:24px;letter-spacing:0.08em;color:#6c6f85;">
+    <span>PRESENTATION TEMPLATE</span>
+    <span>15</span>
+  </div>
+</section>
+
+<section data-label="引用" data-speaker-notes="引用。紙色をわずかに変え、飾りは朱の短い罫線のみ。" style="background:#e6e9ef;color:#4c4f69;font-family:'M PLUS Rounded 1c',sans-serif;padding:120px 160px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;">
+  <div style="width:88px;height:3px;background:#e64553;margin-bottom:56px;"></div>
+  <blockquote style="margin:0 0 56px 0;font-family:'M PLUS Rounded 1c',sans-serif;font-size:60px;font-weight:400;line-height:1.6;letter-spacing:0.01em;color:#4c4f69;max-width:1440px;">完璧とは、付け加えるものが何もなくなったときではなく、削るものが何もなくなったときに達成される。</blockquote>
+  <div style="font-family:'M PLUS Rounded 1c',sans-serif;font-size:26px;letter-spacing:0.12em;color:#6c6f85;">ANTOINE DE SAINT-EXUPÉRY</div>
 </section>
 
 </deck-stage>

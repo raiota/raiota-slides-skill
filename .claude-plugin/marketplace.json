@@ -10,8 +10,8 @@
     {
       "name": "raiota-slides",
       "source": "./plugins/raiota-slides",
-      "description": "HTML スライドを組むための個人用テンプレート（Catppuccin Latte 配色・22 レイアウト）",
-      "version": "0.1.0",
+      "description": "HTML スライドを組むための個人用テンプレート（Catppuccin Latte 配色・16 レイアウト）",
+      "version": "0.2.0",
       "author": {
         "name": "raiota"
       },

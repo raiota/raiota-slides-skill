@@ -15,6 +15,7 @@
   a:hover { color:#c93a48; border-bottom-color:#c93a48; }
 </style>
 <script src="./deck-stage.js"></script>
+<script src="./image-slot.js"></script>
 <script>
   // data-tex 属性の式を KaTeX で描画する（data-tex-display を付けると独立式）
   (function typeset() {
@@ -34,7 +35,8 @@
 <body>
 <deck-stage width="1920" height="1080">
 
-  <!-- layouts.html から必要なレイアウトを貼り、中身だけ書き換える -->
+  <!-- layouts.html から必要なレイアウトの <section> を貼り、中身だけ書き換える -->
+  <!-- 最低限の骨格: 表紙 → 自己紹介 → 目次 → 章扉 → 本文 -->
 
 </deck-stage>
 </body>

@@ -6,7 +6,7 @@ raiota の個人用 Claude Code プラグインを配布するマーケットプ
 
 | プラグイン      | 内容                                                                             |
 | --------------- | -------------------------------------------------------------------------------- |
-| `raiota-slides` | HTML スライドのテンプレート。Catppuccin Latte 配色・M PLUS Rounded 1c・22 レイアウト |
+| `raiota-slides` | HTML スライドのテンプレート。Catppuccin Latte 配色・M PLUS Rounded 1c・16 レイアウト |
 
 ## 導入（別の端末で使う）
 
@@ -66,7 +66,7 @@ Claude Code で次の 2 コマンドを実行する。
         └── skills/
             └── raiota-slides/
                 ├── SKILL.md      スライド作成の手順と規則
-                ├── assets/       boilerplate・レイアウト・deck-stage.js
+                ├── assets/       boilerplate・レイアウト・deck-stage.js・image-slot.js
                 └── reference/    デザイントークン
 ```
 
